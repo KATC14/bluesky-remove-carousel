@@ -29,9 +29,9 @@
           Nodes[i].setAttribute('style', 'height:unset;')
           Nodes[i].parentNode.setAttribute('style', 'height:unset;')
           Nodes[i].childNodes[0].setAttribute('style', 'height:unset; padding-right:unset; flex-direction:column !important;')
-          var clone = Nodes[i].cloneNode(true)
-          Nodes[i].parentNode.appendChild(clone)
-          Nodes[i].remove()
+          //var clone = Nodes[i].cloneNode(true)
+          //Nodes[i].parentNode.appendChild(clone)
+          //Nodes[i].remove()
         }
       }
       last = temp
