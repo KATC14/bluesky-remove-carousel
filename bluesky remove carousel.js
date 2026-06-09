@@ -15,17 +15,15 @@
 (function() {
   NodeCreationObserver.init("observed-remove-carousel-bsky")
   var Nodes = []
-  var num = -1
   var last = ''
   NodeCreationObserver.onCreation('img', function(Node) {
     var top = Node.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
     if (top.getAttribute('aria-roledescription') == 'carousel'){
       var temp = top.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
       if (temp != last){
-        num += 1
         Nodes.push(top)
         for (var i = 0, max = Nodes.length; i < max; i++) {
-          console.log(Nodes[i])
+          //console.log(Nodes[i])
           Nodes[i].setAttribute('style', 'height:unset;')
           Nodes[i].parentNode.setAttribute('style', 'height:unset;')
           Nodes[i].childNodes[0].setAttribute('style', 'height:unset; padding-right:unset; flex-direction:column !important;')
