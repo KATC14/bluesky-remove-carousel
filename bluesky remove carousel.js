@@ -19,7 +19,7 @@
   NodeCreationObserver.onCreation('img', function(Node) {
     var top = Node.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
     if (top.getAttribute('aria-roledescription') == 'carousel'){
-      var temp = top.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
+      var temp = top.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode//.parentNode.parentNode
       if (temp != last){
         Nodes.push(top)
         for (var i = 0, max = Nodes.length; i < max; i++) {
